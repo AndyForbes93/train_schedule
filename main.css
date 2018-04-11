@@ -1,0 +1,22 @@
+body{
+    background-color: #72AB97;
+}
+.card-header{
+    background-color: #0E563D;
+    color: white;
+
+
+}
+.card-body{
+    background-color: #478E75;
+    color: white;
+    
+}
+.jumbotron {
+    background-image: url("https://www.lakesiderailway.co.uk/wp-content/uploads/2016/05/train2-0x560.jpg");
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px #000000;
+
+}

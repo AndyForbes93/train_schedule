@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Train Schedule Tracker</h1>
+            <p class="lead text-center">Type in the information for your train and this app will track how long until it arrives.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="lead text-center">
+                    <p class="display-4s">
+                        <strong>Current Train Schedule</strong>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h6>Train Name</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Destination</h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Frequency</h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Next Arrival</h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Minutes Away</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="entry">
+                    <div class="row">
+                        <div class="col-md-3" id="name-display"></div>
+                        <div class="col-md-3" id="destination-display"></div>
+                        <div class="col-md-2" id="frequency-display"></div>
+                        <div class="col-md-2" id="arrival-display"></div>
+                        <div class="col-md-2" id="minute-display"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="lead text-center">
+                    <p class="display-4s">
+                        <strong>Current Train Schedule</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="name" class="form-control" id="train-name-input" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Role">Train Destination</label>
+                        <input type="destination" class="form-control" id="destination-input" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="Start Time">First Train Time (HH:mm military time)</label>
+                        <input type="time" class="form-control" id="time-input" placeholder="HH:mm">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (Minutes)</label>
+                        <input type="frequency" class="form-control" id="frequency-input" placeholder="Frequency Minutes">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
